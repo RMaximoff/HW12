@@ -11,7 +11,7 @@ def get(array, index, default=None):
     :param default: значение по-умолчанию.
     :return: значение по индексу или значение по-умолчанию.
     """
-    if index and index > 0:
+    if index and 0 <= index < len(array):
         return array[index]
     else:
         return default
@@ -43,3 +43,4 @@ def my_slice(coll, start=0, end=None):
             normalized_start += length
 
     return coll[normalized_start:normalized_end]
+
